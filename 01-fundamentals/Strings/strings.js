@@ -42,10 +42,55 @@
  let text = 'i am learning Javascript in depth';
  console.log(text.indexOf('Javascript'));
 
+ // second example
+ const tagWord ='The Odin project- is one of best resources to learn code other than resources';
+
+ const firstComment = tagWord.indexOf('resources');
+ const secondComment = tagWord.indexOf('resources',firstComment + 1);
+ console.log(firstComment);
+ console.log(secondComment);
+
+ 
+
  //string.slice
 
  let sentance = 'A quick brown fox jumps over the lazay dog';
   let newSen = sentance.slice(7,17);
   console.log(newSen);
   
+
+
+  // practice 
+const cities = ['lonDon','manCHESTer', 'BiRmiNGHAM','liVERpoOL'];
+
+for (const city of cities) {
+   const lower = city.toLowerCase();
+   const firstLetter = lower.slice(0,1);
+   const captilized = lower.replace(firstLetter,firstLetter.toUpperCase());
+   console.log(captilized);
+   
+
+}
+
+
+
+const stations = [
+  "MAN675847583748sjt567654;Manchester Piccadilly",
+  "GNF576746573fhdg4737dh4;Greenfield",
+  "LIV5hg65hd737456236dch46dg4;Liverpool Lime Street",
+  "SYB4f65hf75f736463;Stalybridge",
+  "HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield",
+];
+
+for (const station of stations) {
+   const code = station.slice(0,3);
+   const semiIndex = station.indexOf(';');
+   const name = station.slice(semiIndex + 1);
+   const finalCode = `${code} : ${name}`;
+   console.log(finalCode);
+   
+   
+}
+
+
 
